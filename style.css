@@ -33,16 +33,19 @@ body{
     height: 400px;
     left: 50%;
     transform: translate(-50%,-50%);
+    transform-style: preserve-3d;
 }
 .container h1{
     color: #121212;
     font-size: 62px;
+    transform: translateZ(50px);
 }
 .container h1 span{
     color: #c81d1d;
 }
 p{
     color: #e7e5e5;
+    transform: translateZ(30px);
 }
 
 .boxx{
@@ -52,6 +55,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateZ(40px);
 }
 
 /* From Uiverse.io by JaydipPrajapati1910 */ 
@@ -271,3 +275,28 @@ p{
     }
   }
   
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .container {
+        width: 80%;
+        top: 60%;
+    }
+    .container h1 {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+        top: 65%;
+        text-align: center;
+    }
+    .container h1 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
